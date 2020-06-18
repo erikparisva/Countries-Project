@@ -30,4 +30,7 @@ function displayCountryInfo(countryByAlpha3Code) {
   document.getElementById("currencies").innerHTML = countryData.currencies.filter(c => c.name).map(c => `${c.name} (${c.code})`).join(", ");
   document.getElementById("region").innerHTML = countryData.region;
   document.getElementById("subregion").innerHTML = countryData.subregion;
+  document.getElementById("languages").innerHTML = countryData.languages.filter(c => c.name).map(c => `${c.name} (${c.nativeName})`).join(", ");
+  document.getElementById("topLevelDomain").innerHTML = countryData.topLevelDomain;
+  document.getElementById("callingCodes").innerHTML = countryData.callingCodes
 }
