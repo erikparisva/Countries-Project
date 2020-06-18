@@ -27,7 +27,7 @@ function displayCountryInfo(countryByAlpha3Code) {
   document.querySelector("#flag-container img").alt = `Flag of ${countryData.name}`;  
   document.getElementById("capital").innerHTML = countryData.capital;
   document.getElementById("population").innerHTML = countryData.population.toLocaleString("en-US");
-  document.getElementById("currencies").innerHTML = countryData.currencies.filter(c => c.name).map(c => `${c.name} (${c.code})`).join(", ");
+  document.getElementById("currencies").innerHTML = countryData.currencies.filter(c => c.name).map(c => `${c.name} (${c.code}, ${c.symbol})`).join(", ");
   document.getElementById("region").innerHTML = countryData.region;
   document.getElementById("subregion").innerHTML = countryData.subregion;
   document.getElementById("languages").innerHTML = countryData.languages.filter(c => c.name).map(c => `${c.name} (${c.nativeName})`).join(", ");
