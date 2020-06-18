@@ -1,57 +1,51 @@
-html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url(../img/worldmap.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Dosis', sans-serif;
-}
-.search-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #2f3640;
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-color: #eee;
+  }
+  h1 {
     text-align: center;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-}
-.search-box:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-}
-.search-box:hover > .search-btn {
-    background: white;
-}
-.search-btn {
-    color: #5d93c1;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    text-decoration: none;
-}
-.search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
+  }
+  #main-container {
+    width: 502px;
+    margin: 30px auto;
     padding: 0;
-    color: white;
-    font-size: 1rem;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-}
-
+  }
+  #flag-container {
+    height: 252px;
+    background-color: #fff;
+    border: 1px solid #333;
+  }
+  #flag-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #info-container select {
+    display: block;
+    margin: 20px auto;
+    padding: 5px;
+    min-width: 100%;
+    color: #333;
+    font-size: 15px;
+    font-weight: 900;
+    text-align-last: center;
+  }
+  #info-container p {
+    padding: 0 10px;
+    font-weight: 600;
+  }
+  #info-container p span {
+    font-weight: normal;
+  }
+  
+  @media (max-width: 768px) {
+    body { font-size: 12px; }
+    #main-container { width: 342px; }  
+    #flag-container { height: 172px; }  
+    #info-container select { font-size: 12px; font-weight: 600; }
+  }
